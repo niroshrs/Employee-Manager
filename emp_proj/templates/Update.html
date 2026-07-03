@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Employee</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'update.css' %}">
+</head>
+<body>
+    {{ redirect_to_login_immediately }}
+    <h1>Update Employee (Pre - &alpha; state)</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" required id="name" name="name" value="{{ emp.name }}"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" required id="email" name="email" value="{{ emp.email }}"><br><br>
+        <label for="mob_no">Mobile Number:</label>
+        <input type="tel" required id="mob_no" name="mob_no" value="{{ emp.mob_no }}"><br><br>
+        <input type="submit" value="Update">
+    </form>
+    
+</body>
+</html>

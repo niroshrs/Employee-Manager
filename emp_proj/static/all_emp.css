@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Operator Mono';
+    src: url('Operator Mono Redium Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.image {
+    display: flex; /* Changed from block to flex to center the img inside */
+    justify-content: center; 
+    position: sticky;
+    top: 0;
+    width: 100%; /* Ensures the black bar spans the whole top */
+    z-index: 1000; 
+    background-color: black; 
+    padding: 10px 0; /* Optional: adds some breathing room */
+}
+.createButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+    font-family: 'Operator Mono', sans-serif;
+    margin-bottom: 20px;
+}
+
+h1,p {
+    font-family: consolas;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8fbcbb;
+    margin-bottom: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    font-family: consolas;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #8fbcbb;
+    background-color: black;
+    min-height: 100vh; 
+    margin: 0;
+    
+    
+    background: radial-gradient(circle at bottom,#434c5e, #2e3440);
+}
+
+.button{
+    color: rosybrown;
+}

@@ -1,0 +1,20 @@
+<!-- templates/session_expired.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Expired</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <video class='video' autoplay muted loop style="width:100%;">
+        <source src="{% static 'video/background.mp4' %}" type="video/mp4">
+    </video>
+    <div class="login-container" style="align-items:center;justify-content:center;">
+        <h2>Session Expired</h2>
+        <a href="{% url 'login' %}">
+            <button class="btn-login">Log in again</button>
+        </a>
+    </div>
+</body>
+</html>

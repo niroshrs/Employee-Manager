@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Employees</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'all_emp.css' %}">
+</head>
+<body>
+    <div class="image">
+        <img src="{% static 'image/images.png' %}" alt="Employee Image">
+    </div>
+
+    <div>
+        <h1>All Employees</h1>
+    </div>
+    
+    <table border="1" cellpadding="10" cellspacing="0">
+        <a href="/logout/" class="button">Logout</a>
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Employee</th>
+                <th>employee Email</th>
+                <th>Mobile Number</th>
+                <th>Delete Employee Data</th>
+                <th>Update Employee Data</th>
+                <th>Date</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for data in emp_data %}
+            <tr>
+                <td>{{ data.emp_id }}</td>
+                <td>{{ data.name }}</td>
+                <td>{{ data.email }}</td>
+                <td>{{ data.mob_no }}</td>
+                <td><a class='button' href="/delete/{{data.id}}">Delete</a></td>
+                <td><a class='button' href="/update/{{data.id}}">Update</a></td>
+                <td>{{ data.date }}</td> 
+                
+            </tr>
+            {% endfor %}
+            <button class="createButton" onclick="window.location.href='/create_emp'">
+                <b>Create Employee</b>
+            </button>
+        </tbody>
+        </table>
+</body>
+</html>

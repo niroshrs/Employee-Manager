@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+    {%load static%}
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="image">
+            <img src="{% static 'image/images.png' %}" alt="Employee Image">
+        </div>
+    <video class='video' autoplay muted loop id="bg-video" style="width: 100%;">
+        <source src="{% static 'video/background.mp4' %}" type="video/mp4">
+    </video>
+    <div class="login-container">
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <h2>Sign Up</h2>
+            </div>
+            <div>
+                <div>
+                    <label class="label"for="emp_id">Employee ID</label>  
+                </div>
+                <input class='iBox' type="number" id="emp_id" name="emp_id" required>
+            </div>
+            <div>
+                <div>
+                    <label class="label" for="password">Password</label>
+                </div>
+                <input class='iBox' type="password" id="password" name="password" required>
+            </div>
+            <div class='Login'>
+                <button class="btn-login" type="submit">Sign Up</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>

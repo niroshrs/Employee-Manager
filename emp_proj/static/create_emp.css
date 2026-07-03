@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "Operator Mono";
+    src: url("/static/fonts/OperatorMono-Med.otf") format("opentype");
+}
+
+.image {
+    display: flex; /* Changed from block to flex to center the img inside */
+    justify-content: center; 
+    position: sticky;
+    top: 0;
+    width: 100%; /* Ensures the black bar spans the whole top */
+    z-index: 1000; 
+    background-color: black; 
+    padding: 10px 0; /* Optional: adds some breathing room */
+}
+.goBack,
+.submit {
+    background-color: #88c0d0;
+    color: #131314;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    width: 80px;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-family: consolas;
+    font-size: 14px;
+    font-weight: bold;
+    backdrop-filter: blur(0.2px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.goBack:hover,
+.submit:hover {
+    background-color: #0056b3;
+}
+
+.submit{
+    margin-right: 20px;
+}
+
+h1 {
+    font-family: consolas;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom:30px;
+    margin-top: 0px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    font-family: "Operator Mono", sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    min-height: 100vh;
+    background-color: #131314;
+}
+
+.userLogin {
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    padding: 32px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 45px;
+    backdrop-filter: blur(20px);
+}
+
+.iBox{
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    backdrop-filter: blur(20px);
+    
+}
+
+.btn-create{
+    display: flex;
+    justify-content: center;
+}
+
+.label{
+    color: whitesmoke;
+}
+
+.video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Pushes video to the back */
+    object-fit: cover; /* Prevents video distortion */
+    filter: blur(10px);
+}

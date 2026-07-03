@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    flex-direction: column;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    min-height: 100vh;
+    background-color: #131314;
+}
+
+.image {
+    display: flex; /* Changed from block to flex to center the img inside */
+    justify-content: center; 
+    position: sticky;
+    top: 0;
+    width: 100%; /* Ensures the black bar spans the whole top */
+    z-index: 1000; 
+    background-color: black; 
+    padding: 10px 0; /* Optional: adds some breathing room */
+}
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height:300px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 45px;
+    backdrop-filter: blur(20px);
+    margin-top: 5%;
+}
+
+h2{
+    font-family: consolas;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom:30px;
+    margin-top: 0px;
+}
+
+.label{
+    display: block;
+    color: whitesmoke;
+    font-family: 'Operator Mono';
+    margin-bottom: 10px;
+}
+
+.iBox{
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 50px;
+    border: white;
+    border: none;
+}
+
+.Login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 50px;
+    border: white;
+}
+
+.btn-login{
+    background-color: #88c0d0;
+    color: #131314;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    width: 80px;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-family: consolas;
+    font-size: 14px;
+    font-weight: bold;
+    backdrop-filter: blur(0.2px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Pushes video to the back */
+    object-fit: cover; /* Prevents video distortion */
+    filter: blur(10px);
+}
